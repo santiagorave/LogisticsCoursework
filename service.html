@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/service.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head> 
 <body>
     <!-- TOPBAR SECTION -->
@@ -35,30 +35,26 @@
     <!-- TOPBAR SECTION END -->
     <!-- NAV -->
     <nav>
-        <section>
-            <aside>
-                <h2>
-                    <i class="fa-solid fa-truck"></i>
-                    Faster
-                </h2>
-            </aside>
+        <article>
+            <h2>
+                <i class="fa-solid fa-truck"></i>
+                Faster
+            </h2>
+        </article>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+        </ul>
+        <details>
+            <summary class="fa-solid fa-bars"></summary>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="service.html">Service</a></li>
             </ul>
-            <details>
-                <summary class="fa-solid fa-bars"></summary>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="service.html">Service</a></li>
-                </ul>
-            </details>
-            <section>
-                <a href="#">Get A Quote</a>
-            </section>
-        </section>
+        </details>
+        <a href="#">Get A Quote</a>
     </nav>
     <!-- NAV END -->
     <!-- HEADER -->
@@ -83,12 +79,12 @@
         <section class="services">
             <article>
                 <aside>
-                    <h5>
+                    <h4>
                         Our Services
-                    </h5>
-                    <h3>
+                    </h4>
+                    <h2>
                         Best Logistic Services
-                    </h3>
+                    </h2>
                 </aside>
                 <section>
                     <aside>
@@ -140,12 +136,12 @@
             <article>
                 <section>
                     <article>
-                        <h5>
+                        <h4>
                             Get A Quote
-                        </h5>
-                        <h3>
+                        </h4>
+                        <h2>
                             Request A Free Quote
-                        </h3>
+                        </h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis atque corporis culpa iure quisquam dignissimos, dolorem amet adipisci aliquam quis exercitationem quod fugit consequuntur, repudiandae, eveniet accusantium recusandae vero deleniti!
                         </p>
@@ -209,8 +205,12 @@
         <section class="pricing">
             <article>
                 <aside>
-                    <h5>Pricing Plan</h5>
-                    <h3>Affordable Pricing Packages</h3>
+                    <h4>
+                        Pricing Plan
+                    </h4>
+                    <h2>
+                        Affordable Pricing Packages
+                    </h2>
                 </aside>
                 <section>
                     <!-- $49 -->
@@ -309,8 +309,117 @@
         <!-- PRICING END -->
     </main>
     <!-- MAIN END -->
-                       
-        
+    <!-- FOOTER -->
+    <footer>
+        <article>
+            <aside>
+                <h3>
+                    Get In Touch
+                </h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <address>
+                            123 Street, New York, USA
+                        </address>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone-flip"></i>
+                        <a href="tel:+0123456789">+012 345 6789</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:info@company.com">info@company.com</a>
+                    </li>
+                </ul>
+                <section>
+                    <ul>
+                        <li><a href="#" class="fa-brands fa-twitter"></a></li>
+                        <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
+                        <li><a href="#" class="fa-brands fa-linkedin-in"></a></li>
+                        <li><a href="#" class="fa-brands fa-instagram"></a></li>
+                    </ul>
+                </section>
+            </aside>
+            <aside>
+                <h3>
+                    Quick Links
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#"> 
+                            <i class="fa-solid fa-angle-right"></i> 
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <i class="fa-solid fa-angle-right"></i> 
+                            About Us
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <i class="fa-solid fa-angle-right"></i> 
+                            Our Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <i class="fa-solid fa-angle-right"></i> 
+                            Pricing Plan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <i class="fa-solid fa-angle-right"></i> 
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <aside>
+                <h3>
+                    Newsletter
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus ea eum aut omnis illum a minus, atque hic placeat voluptatem, quod accusantium sequi, vitae nesciunt magni fugiat accusamus veritatis?
+                </p>
+                <aside>
+                    <form>
+                        <input type="email" name="email" placeholder="Your Email Address">
+                        <aside>
+                            <input type="submit" value="Sign Up">
+                        </aside>
+                    </form>
+                </aside>
+            </aside>
+        </article>
 
+        <!-- BOTTOMBAR -->
+        <section>
+            <article>
+                <p>
+                    &copy; <a href="#">Your Site Name</a>, All Rights Reserved. Designed by <a href="#">HTML Codex</a>
+                </p>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </footer>    
 </body>
 </html>
