@@ -4,11 +4,17 @@
 
 @media (min-width:$mobileScreen) {
 
+    %widthSection {
+        width: 90%;
+    }
+    .contact, .text {
+       @extend %widthSection;
+    }
+
     img {
         width: 10%;
     }
     .contact {
-        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -45,7 +51,7 @@
 
     
         section {
-            background-color: #f2f2f4;
+            background-color: $grayBackground;
             display: flex;
             justify-content: center;
         }
@@ -79,6 +85,44 @@
         small {
             color: $orange;
             font-weight: bold;
+        }
+    }
+
+    .right {
+
+        >section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 4vh;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2vh;
+
+            >article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 2vh;
+                text-align: center;
+                background-color: $grayBackground;
+                padding: 4vh;
+            }
+
+            a {
+                color: white;
+                background-color: $orange;
+                width: 50%;
+                padding: 1vh;
+                font-size: 13px;
+            }
+            
+            p {
+                font-weight: 300;
+            }
         }
     }
 }
