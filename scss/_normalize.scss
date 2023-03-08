@@ -1,6 +1,6 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     font-family: $fontFamily;
 }
 
@@ -10,4 +10,10 @@ html {
 
 a {
     text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
