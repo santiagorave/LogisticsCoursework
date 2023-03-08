@@ -1,0 +1,53 @@
+img {
+    width: 10%;
+}
+
+
+//NORMALIZE IN MAIN BRANCH
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.contact {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4vh;
+
+    >article {
+        width: 100%;
+    }
+
+    section {
+        background-color: #f2f2f4;
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        width: 90%;
+        padding: 5% 0vh 5% 0vh;
+
+        >input,>textarea {
+            padding: 3%;
+            border: none;
+            &::placeholder {
+                padding-left: 2vh;
+            }
+
+        }
+
+        [type="submit"] {
+            background-color: orange;
+            color: white;
+            width: 70%;
+        }
+    }
+}
