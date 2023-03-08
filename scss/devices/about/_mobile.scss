@@ -7,12 +7,13 @@
     %widthSection {
         width: 90%;
     }
-    .contact, .text {
+    .contact, .text, .tags {
        @extend %widthSection;
     }
 
     img {
-        width: 10%;
+        width: 100%;
+        height: fit-content;
     }
     .contact {
         display: flex;
@@ -76,8 +77,7 @@
             }
     
             [type="submit"] {
-                background-color: $orange;
-                color: white;
+                @include styleButtons;
                 width: 70%;
             }
         }
@@ -122,6 +122,26 @@
             
             p {
                 font-weight: 300;
+            }
+        }
+
+        .tags {
+            display: flex;
+            flex-direction: column;
+            row-gap: 3vh;
+            >section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1vh;
+            }
+
+            aside {
+                background-color: $grayBackground;
+                padding: 2vh;
+            }
+            h6 {
+                font-weight: 400;
+                font-size: 15px;
             }
         }
     }
