@@ -7,7 +7,7 @@
     %widthSection {
         width: 90%;
     }
-    .contact, .text, .tags, .figures, .categories, .search {
+    .contact, .text, .tags, .figures, .categories, .search, .left{
        @extend %widthSection;
     }
 
@@ -217,6 +217,66 @@
     }
 
     .left {
-        
+        @include columnDirection;
+        row-gap: 5vh;
+        >figure {
+            background-color: $greyBackground;
+        }
+
+        figcaption {
+            @include columnDirection;
+            padding: 3vh;
+            row-gap: 3vh;
+            a {
+                color: $orange;
+                border-bottom: 1px solid $orange;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                column-gap: 1vh;
+                width: 35%;
+
+            }
+            i {
+                font-size: 11px;
+            }
+            aside {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+                i {
+                    color: $orange;
+                    font-size: 20px;
+                }
+            }
+
+            >article {
+                @include columnDirection;
+                row-gap: 3vh;
+            }
+
+            >section {
+                display: flex;
+                justify-content: space-between;
+                img {
+                    border-radius: 50%;
+                    width: 7vh;
+                    height: 7vh;
+                }
+                >article {
+                width: 45%;
+                display: flex;
+                column-gap: 1vh;
+                align-items: center;
+
+                }
+            }
+        }
+    }
+
+    .top-section {
+        @include columnDirection;
+        row-gap: 5vh;
+        align-items: center;
     }
 }
