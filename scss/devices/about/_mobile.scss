@@ -1,26 +1,31 @@
-
-
-
-
 @media (min-width:$mobileScreen) {
 
     %widthSection {
         width: 90%;
     }
-    .contact, .text, .tags, .figures, .categories, .search, .left{
-       @extend %widthSection;
+
+    .contact,
+    .text,
+    .tags,
+    .figures,
+    .categories,
+    .search,
+    .left {
+        @extend %widthSection;
     }
 
     img {
         width: 100%;
     }
+
     .contact {
         @include columnDirection;
         align-items: center;
         row-gap: 4vh;
 
-        > aside {
+        >aside {
             width: 100%;
+
             p {
                 background-color: $orange;
                 height: 10vh;
@@ -35,11 +40,12 @@
                 color: white;
             }
         }
-    
+
         >article {
             width: 100%;
             @include columnDirection;
             row-gap: 3vh;
+
             >aside {
                 width: 50%;
             }
@@ -47,31 +53,34 @@
 
 
 
-    
+
         section {
             background-color: $greyBackground;
             display: flex;
             justify-content: center;
         }
-    
+
         form {
             @include columnDirection;
             row-gap: 2vh;
-            width: 90%;
             padding: 5% 0vh 5% 0vh;
-    
+            width: 90%;
+
             >textarea {
                 resize: vertical;
             }
-            >input,>textarea {
+
+            >input,
+            >textarea {
                 padding: 3%;
                 border: none;
+
                 &::placeholder {
                     padding-left: 2vh;
                 }
-    
+
             }
-    
+
             [type="submit"] {
                 @include styleButtons;
                 width: 70%;
@@ -88,10 +97,12 @@
         @include columnDirection;
         row-gap: 4vh;
         align-items: center;
+
         >section {
             @include columnDirection;
             align-items: center;
             row-gap: 4vh;
+            padding-bottom: 4vh;
         }
 
         .text {
@@ -114,7 +125,7 @@
                 padding: 1vh;
                 font-size: 13px;
             }
-            
+
             p {
                 font-weight: 300;
             }
@@ -123,6 +134,7 @@
         .tags {
             @include columnDirection;
             row-gap: 3vh;
+
             >section {
                 display: flex;
                 flex-wrap: wrap;
@@ -133,6 +145,7 @@
                 background-color: $greyBackground;
                 padding: 2vh;
             }
+
             h6 {
                 font-weight: 400;
                 font-size: 15px;
@@ -142,11 +155,13 @@
         .figures {
             @include columnDirection;
             row-gap: 2vh;
+
             >figure {
                 display: flex;
                 align-items: center;
                 width: 100%;
             }
+
             figcaption {
                 background-color: $greyBackground;
                 padding: 2vh;
@@ -165,8 +180,8 @@
             row-gap: 3vh;
 
             ul {
-            @include columnDirection;
-            row-gap: 1vh;
+                @include columnDirection;
+                row-gap: 1vh;
             }
 
             li {
@@ -190,15 +205,25 @@
                 color: black;
                 padding: 2%;
             }
-        } 
+
+            span {
+                font-weight: bold;
+                background-color: $greyBackground;
+                width: 5vh;
+                display: flex;
+                justify-content: center;
+            }
+        }
 
         .search {
             background-color: $greyBackground;
+
             form {
                 display: flex;
                 justify-content: center;
                 padding-top: 3vh;
-                padding-bottom:3vh;
+                padding-bottom: 3vh;
+
                 input {
                     width: 80%;
                     border: none;
@@ -206,6 +231,7 @@
                     font-size: 16px;
 
                 }
+
                 button {
                     padding: 2vh;
                     border: none;
@@ -219,6 +245,7 @@
     .left {
         @include columnDirection;
         row-gap: 5vh;
+
         >figure {
             background-color: $greyBackground;
         }
@@ -227,23 +254,27 @@
             @include columnDirection;
             padding: 3vh;
             row-gap: 3vh;
+
             a {
                 color: $orange;
-                border-bottom: 1px solid $orange;
                 text-transform: uppercase;
                 display: flex;
                 align-items: center;
                 column-gap: 1vh;
-                width: 35%;
+                border-bottom: 1px solid $orange;
+                width: fit-content;
 
             }
+
             i {
                 font-size: 11px;
             }
+
             aside {
                 display: flex;
                 align-items: center;
                 column-gap: 2vh;
+
                 i {
                     color: $orange;
                     font-size: 20px;
@@ -258,16 +289,18 @@
             >section {
                 display: flex;
                 justify-content: space-between;
+
                 img {
                     border-radius: 50%;
                     width: 7vh;
                     height: 7vh;
                 }
+
                 >article {
-                width: 45%;
-                display: flex;
-                column-gap: 1vh;
-                align-items: center;
+                    width: 45%;
+                    display: flex;
+                    column-gap: 1vh;
+                    align-items: center;
 
                 }
             }
