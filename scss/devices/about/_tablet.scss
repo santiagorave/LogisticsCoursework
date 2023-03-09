@@ -1,0 +1,30 @@
+@media (min-width:$tabletScreen) {
+
+    .contact {
+        form {
+            padding: 4% 0vh 4% 0vh;
+            width: 95%;
+
+            input,textarea {
+                padding: 2%;
+
+            }
+
+            [type="submit"] {
+                @include styleButtons;
+                width: 20%;
+            }
+        }
+    }
+
+    .right {
+        .text {
+            a {
+                width: 15%;
+    
+            }
+        }
+    }
+
+
+}
