@@ -1,5 +1,6 @@
 body,
 form,
+footer,
 details > ul,
 header > section,
 header > section > article,
@@ -133,7 +134,7 @@ main > section > article {
 
         article {
             height: 100%;
-            @include columnDirection;
+            // @include columnDirection;
             text-align: center;
             justify-content: center;
             color: whitesmoke;
@@ -310,6 +311,7 @@ main > section > article {
         }
 
         section {
+            @include columnDirection;
             > article {
                 padding-bottom: 5vh;
                 row-gap: 4vh;
@@ -318,13 +320,14 @@ main > section > article {
             aside {
                 @include columnDirection;
                 background-color: $greyBackground;
-                padding: 3vh;
+                padding-top: 3vh;
+                padding-bottom: 3vh;
                 align-items: center;
                 justify-content: center;
                 row-gap: 3vh;
                             
             }
-
+        
             h4 {
                 padding: 2vh;
                 background-color: $orange;
@@ -332,6 +335,23 @@ main > section > article {
                 font-weight: 800;
                 text-transform: capitalize;
                 color: black;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 800;
+
+            }
+
+            small {
+                font-size: 20px;
+                font-weight: 200;
+            }
+
+            small:nth-child(1){
+                color: red;
+                
+                
             }
 
             a {
@@ -343,6 +363,49 @@ main > section > article {
             }
         }
     }
+
+    /* FOOTER */
+    // footer {
+    //     background-color: $darkBlue;
+    //     color: white;
+    //     padding: 5%;
+    //     row-gap: 3vh;
+
+    //     > article {
+    //         border-bottom: 1px solid dimgray;
+    //         padding-bottom: 10vh;
+
+    //         > aside {
+    //             row-gap: 3vh;
+    //         }
+
+    //         a {
+    //             color: whitesmoke;
+    //         }
+    //     }
+
+    //     h3 {
+    //         color: $orange;
+    //         font-weight: 700;  
+    //     }
+
+    //     p {
+    //         color: whitesmoke;
+    //     }
+
+    //     ul {
+    //         list-style-type: none;
+            
+    //     }
+
+    //     p {
+    //         text-align: center;
+    //     }
+
+    //     a {
+    //         color: $orange;
+    //     }
+    // }
     
 }
 
