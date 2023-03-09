@@ -7,17 +7,15 @@
     %widthSection {
         width: 90%;
     }
-    .contact, .text, .tags {
+    .contact, .text, .tags, .figures, .categories, .search {
        @extend %widthSection;
     }
 
     img {
         width: 100%;
-        height: fit-content;
     }
     .contact {
-        display: flex;
-        flex-direction: column;
+        @include columnDirection;
         align-items: center;
         row-gap: 4vh;
 
@@ -40,8 +38,7 @@
     
         >article {
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            @include columnDirection;
             row-gap: 3vh;
             >aside {
                 width: 50%;
@@ -52,14 +49,13 @@
 
     
         section {
-            background-color: $grayBackground;
+            background-color: $greyBackground;
             display: flex;
             justify-content: center;
         }
     
         form {
-            display: flex;
-            flex-direction: column;
+            @include columnDirection;
             row-gap: 2vh;
             width: 90%;
             padding: 5% 0vh 5% 0vh;
@@ -89,26 +85,25 @@
     }
 
     .right {
-
+        @include columnDirection;
+        row-gap: 4vh;
+        align-items: center;
         >section {
-            display: flex;
-            flex-direction: column;
+            @include columnDirection;
             align-items: center;
             row-gap: 4vh;
         }
 
         .text {
-            display: flex;
-            flex-direction: column;
+            @include columnDirection;
             row-gap: 2vh;
 
             >article {
-                display: flex;
-                flex-direction: column;
+                @include columnDirection;
                 align-items: center;
                 row-gap: 2vh;
                 text-align: center;
-                background-color: $grayBackground;
+                background-color: $greyBackground;
                 padding: 4vh;
             }
 
@@ -126,8 +121,7 @@
         }
 
         .tags {
-            display: flex;
-            flex-direction: column;
+            @include columnDirection;
             row-gap: 3vh;
             >section {
                 display: flex;
@@ -136,7 +130,7 @@
             }
 
             aside {
-                background-color: $grayBackground;
+                background-color: $greyBackground;
                 padding: 2vh;
             }
             h6 {
@@ -144,5 +138,85 @@
                 font-size: 15px;
             }
         }
+
+        .figures {
+            @include columnDirection;
+            row-gap: 2vh;
+            >figure {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+            figcaption {
+                background-color: $greyBackground;
+                padding: 2vh;
+                min-height: 8vh;
+                width: 100%;
+            }
+
+            img {
+                width: 20%;
+                height: 12vh;
+            }
+        }
+
+        .categories {
+            @include columnDirection;
+            row-gap: 3vh;
+
+            ul {
+            @include columnDirection;
+            row-gap: 1vh;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                padding: 2%;
+            }
+
+            i {
+                color: $orange;
+            }
+
+            aside {
+                background-color: $greyBackground;
+                padding: 4vh;
+            }
+
+            a {
+                color: black;
+                padding: 2%;
+            }
+        } 
+
+        .search {
+            background-color: $greyBackground;
+            form {
+                display: flex;
+                justify-content: center;
+                padding-top: 3vh;
+                padding-bottom:3vh;
+                input {
+                    width: 80%;
+                    border: none;
+                    padding: 2vh;
+                    font-size: 16px;
+
+                }
+                button {
+                    padding: 2vh;
+                    border: none;
+                    background-color: $orange;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .left {
+        
     }
 }
