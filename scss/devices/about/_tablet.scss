@@ -1,11 +1,18 @@
 @media (min-width:$tabletScreen) {
 
+    %aHover {
+        background-color: $darkBlue;
+        color: $orange ;
+        border-radius: 10px;
+    }
+
     .contact {
         form {
             padding: 4% 0vh 4% 0vh;
             width: 95%;
 
-            input,textarea {
+            input,
+            textarea {
                 padding: 2%;
 
             }
@@ -13,15 +20,133 @@
             [type="submit"] {
                 @include styleButtons;
                 width: 20%;
+                cursor: pointer;
+                transition: .4s;
+                &:hover {
+                    @extend %aHover;
+                }
+
             }
         }
     }
 
     .right {
+        h3 {
+            font-size: 25px;
+        }
+
+        >section {
+            align-items: start;
+            padding-left: 5%;
+
+        }
+
         .text {
             a {
                 width: 15%;
-    
+                transition: .6s;
+            border: 1px solid transparent;
+
+                &:hover {
+                    @extend %aHover;
+                }
+            }
+        }
+
+        .tags {
+            width: 70%;
+
+            >section {
+                row-gap: 2vh;
+                column-gap: 2vh;
+            }
+        }
+
+        .text {
+            width: 95%;
+        }
+
+        .figures {
+            figcaption {
+                width: 50%;
+            }
+        }
+
+        .categories {
+
+            li {
+                padding: 1%;
+
+
+            }
+
+            a {
+                padding: 0%;
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    border-bottom: 1px solid black;
+
+                }
+
+            }
+
+            span {
+                transition: .4s;
+
+                &:hover {
+                    transform: scale(1.2);
+                    background-color: $orange;
+                    color: white;
+                }
+
+            }
+        }
+
+        .search {
+            button {
+                cursor: pointer;
+
+                i {
+                    transition: .7s;
+
+                }
+
+                &:hover i {
+
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+    }
+
+    .left {
+        figcaption {
+            transition: .4s;
+
+            >section {
+                justify-content: start;
+
+
+                >article {
+                    width: 25%;
+                }
+
+            }
+
+            a {
+                transition: .2s;
+
+                &:hover i {
+                    transform: translateX(5px);
+
+                }
+            }
+
+            i {
+                transition: .4s;
+
             }
         }
     }
