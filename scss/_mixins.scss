@@ -2,3 +2,8 @@
     color: white;
     background-color: $orange;
 }
+
+@mixin columnDirection {
+    display: flex;
+    flex-direction: column;
+}
