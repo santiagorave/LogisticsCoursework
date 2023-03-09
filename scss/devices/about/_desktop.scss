@@ -1,18 +1,52 @@
 @media (min-width:$desktopScreen) {
 
     .contact {
+        h3 {
+            font-size: 30px;
+        }
+
         flex-direction: row;
         column-gap: 3vh;
+
         >aside {
-            width: 50%;
+            width: 60%;
         }
 
         form {
-            [type="submit"]{
+            [type="submit"] {
                 width: 30%;
+                font-size: 16px;
+
+            }
+
+            >input,
+            >textarea {
+                &::placeholder {
+                    font-size: 16px;
+                }
+
             }
         }
 
     }
+
+    .top-section {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .left {
+        width: 60%;
+    }
+
+
+
+
+
 
 }
