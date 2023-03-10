@@ -1,0 +1,132 @@
+@media (min-width: $tabletScreen) {
+   %titleTablet{
+      > small {
+         font-size: 22px;
+      }
+
+      > h3 {
+         font-size: 34px;
+      }
+   }
+
+   .team {
+      justify-content: space-between;
+      
+      > figure {
+         width: 48%;
+
+         &:hover aside {
+            height: 100%;
+            z-index: 2;
+         }
+      }
+
+      img {
+         height: 25vh;
+      }
+
+      section {
+         position: relative;
+         overflow: hidden;
+         display: flex;
+         align-items: flex-end;  
+      }
+
+      article {
+         width: 100%;
+         
+         > h5 {
+            font-size: 20px;
+         }
+
+         > p {
+            font-size: 16px;
+         }
+      }
+
+      aside {
+         position: absolute;
+         width: 100%;
+         height: 0%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         column-gap: 2vw;
+         background-color: $orange;
+         transition: .6s;
+         z-index: -1;
+      }
+
+      a {
+         width: 4vh;
+         height: 4vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: $darkBlue;
+         border: 1px solid $darkBlue;
+         border-radius: 50%;
+         font-size: 20px;
+         transition: .5s;
+
+         &:hover {
+            background-color: $darkBlue;
+            color: whitesmoke;
+         }
+      }
+   }
+
+   .blog {
+      >article {
+         @extend %titleTablet;
+      }
+
+      > section {
+         justify-content: space-between;
+         
+         >section {
+            width: 48%;
+         }
+      }
+
+      figure {
+         height: 20vh;
+      }
+
+      section > article {
+         padding: 3vh 0vh;
+      }
+
+      aside {
+         > section {
+            width: 4vh;
+            height: 4vh;
+         }
+
+         p {
+            width: 40%;
+         }
+
+         &:nth-child(1) {
+            width: 50%;
+         }
+
+         &:nth-child(2) {
+            width: 45%;
+         }
+      }
+
+      h5 {
+         font-size: 24px;
+      }
+
+      a:hover {
+         border-color: $darkBlue;
+
+         > p,
+         > i {
+            color: $darkBlue;
+         }
+      }
+   }
+}
