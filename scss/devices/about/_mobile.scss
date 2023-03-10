@@ -1,0 +1,329 @@
+@media (min-width:$mobileScreen) {
+
+    %widthSection {
+        width: 90%;
+    }
+
+    iframe {
+        width: 100%;
+        height:400px;
+        border:0;
+    }
+
+    .contact,
+    .text,
+    .tags,
+    .figures,
+    .categories,
+    .search,
+    .left {
+        @extend %widthSection;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .contact {
+        @include columnDirection;
+        align-items: center;
+        row-gap: 4vh;
+        padding-bottom: 10vh;
+
+        >aside {
+            width: 100%;
+
+            p {
+                background-color: $orange;
+                height: 10vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 2vh;
+                font-weight: 600;
+            }
+
+            i {
+                color: white;
+            }
+        }
+
+        >article {
+            width: 100%;
+            @include columnDirection;
+            row-gap: 3vh;
+
+            >aside {
+                width: 50%;
+            }
+        }
+
+        section {
+            background-color: $greyBackground;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            @include columnDirection;
+            row-gap: 2vh;
+            padding: 5% 0vh 5% 0vh;
+            width: 90%;
+
+            >textarea {
+                resize: vertical;
+            }
+
+            >input,
+            >textarea {
+                padding: 3%;
+                border: none;
+
+                &::placeholder {
+                    padding-left: 2vh;
+                }
+
+            }
+
+            [type="submit"] {
+                @include styleButtons;
+                width: 70%;
+            }
+        }
+
+        small {
+            color: $orange;
+            font-weight: bold;
+        }
+    }
+
+    .right {
+        @include columnDirection;
+        row-gap: 4vh;
+        align-items: center;
+
+        >section {
+            @include columnDirection;
+            align-items: center;
+            row-gap: 4vh;
+            padding-bottom: 4vh;
+        }
+
+        .text {
+            @include columnDirection;
+            row-gap: 2vh;
+
+            >article {
+                @include columnDirection;
+                align-items: center;
+                row-gap: 2vh;
+                text-align: center;
+                background-color: $greyBackground;
+                padding: 4vh;
+            }
+
+
+
+            a {
+                color: white;
+                background-color: $orange;
+                width: 50%;
+                padding: 1vh;
+                font-size: 13px;
+            }
+
+            p {
+                font-weight: 300;
+            }
+        }
+
+        .tags {
+            @include columnDirection;
+            row-gap: 3vh;
+
+            >section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1vh;
+            }
+
+            aside {
+                background-color: $greyBackground;
+                padding: 2vh;
+            }
+
+            h6 {
+                font-weight: 400;
+                font-size: 15px;
+            }
+        }
+
+        .figures {
+            @include columnDirection;
+            row-gap: 2vh;
+
+            >figure {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+
+            figcaption {
+                background-color: $greyBackground;
+                padding: 2vh;
+                min-height: 8vh;
+                width: 100%;
+            }
+
+            img {
+                width: 20%;
+                height: 12vh;
+            }
+        }
+
+        .last-img {
+            >img {
+               display: none;
+            }
+        }
+
+        .categories {
+            @include columnDirection;
+            row-gap: 3vh;
+
+            ul {
+                @include columnDirection;
+                row-gap: 1vh;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                padding: 2%;
+            }
+
+            i {
+                color: $orange;
+            }
+
+            aside {
+                background-color: $greyBackground;
+                padding: 4vh;
+            }
+
+            a {
+                color: black;
+                padding: 2%;
+            }
+
+            span {
+                font-weight: bold;
+                background-color: $greyBackground;
+                width: 5vh;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .search {
+            background-color: $greyBackground;
+
+            form {
+                display: flex;
+                justify-content: center;
+                padding-top: 3vh;
+                padding-bottom: 3vh;
+
+                input {
+                    width: 80%;
+                    border: none;
+                    padding: 2vh;
+                    font-size: 16px;
+
+                }
+
+                button {
+                    padding: 2vh;
+                    border: none;
+                    background-color: $orange;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .left {
+        @include columnDirection;
+        row-gap: 5vh;
+
+        >figure {
+            background-color: $greyBackground;
+        }
+
+        figcaption {
+            @include columnDirection;
+            padding: 3vh;
+            row-gap: 3vh;
+
+            a {
+                color: $orange;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                column-gap: 1vh;
+                border-bottom: 1px solid $orange;
+                width: fit-content;
+
+            }
+
+            i {
+                font-size: 11px;
+            }
+
+            aside {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+
+                i {
+                    color: $orange;
+                    font-size: 20px;
+                }
+            }
+
+            >article {
+                @include columnDirection;
+                row-gap: 3vh;
+            }
+
+            >section {
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    border-radius: 50%;
+                    width: 7vh;
+                    height: 7vh;
+                }
+
+                >article {
+                    width: 45%;
+                    display: flex;
+                    column-gap: 1vh;
+                    align-items: center;
+
+                }
+            }
+        }
+    }
+
+    .top-section {
+        @include columnDirection;
+        row-gap: 5vh;
+        align-items: center;
+        padding-top: 10vh;
+
+    }
+}
