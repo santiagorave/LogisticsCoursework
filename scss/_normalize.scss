@@ -160,9 +160,9 @@ header > section {
 
         article {
             height: 100%;
-            // @include columnDirection;
-            text-align: center;
+            @include columnDirection;
             justify-content: center;
+            align-items:center;
             color: whitesmoke;
         }
 
