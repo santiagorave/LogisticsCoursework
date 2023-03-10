@@ -1,11 +1,82 @@
 @media (min-width: $tabletScreen) {
    %titleTablet{
-      > small {
-         font-size: 22px;
-      }
-
       > h3 {
          font-size: 34px;
+      }
+   }
+
+   .about {
+      > section {
+         > article {
+            @extend %titleTablet;
+         }
+      }
+
+      a {
+         column-gap: 3vw;
+         > section {
+            width: 6vh;
+            height: 6vh;
+            border: 1px solid $orange;
+         }
+
+         p {
+            font-size: 24px;
+         }
+
+         &:hover {
+            color: $orange;
+
+            > section {
+               background-color: transparent;
+            }
+
+            p {
+               color: $orange;
+            }
+         }
+      }
+
+      figcaption {
+         height: 6vh;
+         font-size: 28px;
+      }
+   }
+
+   .feature {
+      row-gap: 3vh;
+
+      > section {
+         row-gap: 2vh;
+
+         > article {
+            @extend %titleTablet;
+         }
+
+         > a {
+            width: 20%;
+            height: 4vh;
+
+            &:hover {
+               color: $orange;
+               background-color: transparent;
+            }
+         }
+      }
+
+      ul {
+         row-gap: 1vh;
+      }
+
+      li > a {
+         column-gap: 2vw;
+      }
+
+      a > p {
+         transition: .5s;
+         &:hover {
+            color: $orange;
+         }
       }
    }
 
