@@ -1,6 +1,59 @@
 @media (min-width: $desktopScreen) {
-   .team {
+   .about {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 2%;
+
       > figure {
+         width: 30%;
+
+         img {
+            height: 42vh;
+         }
+      }
+
+      figcaption {
+         height: 9vh;
+      }
+
+      > section {
+         width: 52%;
+         justify-content: center;
+      }
+      
+      a {
+         column-gap: 1vw;
+
+         > section {
+            width: 8vh;
+            height: 8vh;
+         }
+      }
+   }
+
+   .feature {
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 2%;
+      padding: 0;
+
+      > figure {
+         width: 30%;
+         height: 70vh;
+         img {
+           height: 100%; 
+         }
+      }
+
+      > section {
+         width: 52%;
+      }
+
+   }
+
+   .team {
+      figure {
          width: 23.5%;
       }
 

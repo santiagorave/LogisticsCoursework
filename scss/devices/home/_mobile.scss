@@ -150,11 +150,21 @@
 
    .team{
       width: 84%;
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 5vh;
+      @include columnDirection;
+      row-gap: 3vh;
+      
+      > article {
+         @extend %title;
+         text-align: center;
+      }
+      
+      > section {
+         display: flex;
+         flex-wrap: wrap;
+         row-gap: 5vh;
+      }
 
-      > figure {
+      figure {
          width: 100%;
          @include columnDirection;
          background-color: $greyBackground;
@@ -164,19 +174,20 @@
          height: 40vh;
       }
       
-      article {
+      figcaption article {
          @include columnDirection;
          align-items: center;
          padding: 4% 0%;
          border-bottom: 5px solid $orange;
-         > h5 {
-            font-size: 18px;
-         }
+      }
 
-         > p {
-            font-weight: 300;
-            font-size: 14px;
-         }
+      h5 {
+         font-size: 18px;
+      }
+
+      p {
+         font-weight: 300;
+         font-size: 14px;
       }
       
       aside {

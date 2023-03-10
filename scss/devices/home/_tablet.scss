@@ -13,15 +13,18 @@
       }
 
       a {
+         width: fit-content;
          column-gap: 3vw;
          > section {
             width: 6vh;
             height: 6vh;
             border: 1px solid $orange;
+            transition: .5s;
          }
 
          p {
             font-size: 24px;
+            transition: .5s;
          }
 
          &:hover {
@@ -81,9 +84,15 @@
    }
 
    .team {
-      justify-content: space-between;
+      > article {
+         @extend %titleTablet;
+      }
       
-      > figure {
+      > section {
+         justify-content: space-between;
+      }
+
+      figure {
          width: 48%;
 
          &:hover aside {
@@ -96,25 +105,25 @@
          height: 25vh;
       }
 
-      section {
+      figcaption section {
          position: relative;
          overflow: hidden;
          display: flex;
          align-items: flex-end;  
       }
 
-      article {
+      figcaption article {
          width: 100%;
-         
-         > h5 {
-            font-size: 20px;
-         }
-
-         > p {
-            font-size: 16px;
-         }
       }
 
+      > h5 {
+         font-size: 20px;
+      }
+
+      > p {
+         font-size: 16px;
+      }
+      
       aside {
          position: absolute;
          width: 100%;
