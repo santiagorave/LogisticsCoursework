@@ -1,12 +1,19 @@
 @media (min-width: $desktopScreen) {
+
+    h2 {
+        font-size: 36px;
+    }
+
     /* SERVICES */
     .services {
+        width: 95%;
         > article {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
         }
         section {
-            width: 100%;
+            width: 95%;
             flex-direction: row;
 
             > article {
@@ -15,6 +22,7 @@
         }
     }
 
+    /* QUOTE */ 
     .quote {
         width: 100%;
         section {
@@ -44,5 +52,19 @@
 
         }
     }
-            
+    
+    /* PRICING */
+    .pricing {
+        > article {
+            row-gap: 0;
+        }
+
+        section {
+            padding: 3%;
+        }
+
+        span {
+            font-size: 55px;
+        }
+    } 
 }
