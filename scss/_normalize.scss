@@ -185,6 +185,104 @@ header > section {
         }
 
     }
+    // FOOTER 
+    footer {
+        padding: 2vh 2vh 2vh 2vh;
+        background-color: $darkBlue;
+        a,p,i,address{
+            color: white;
+        }
+        aside {
+            @include columnDirection;
+            row-gap: 4vh;
+            li {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+            }
+        }
+        h3 {
+            color: $orange;
+        }
+        >article {
+            @include columnDirection;
+            row-gap: 5vh;
+            padding-bottom: 10vh;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            input {
+                width: 100%;
+                padding: 2vh;
+                border: none;
+
+            }
+
+            [type="submit"] {
+                @include styleButtons;
+
+            }
+        }
+
+        .icons {
+
+            ul {
+            display: flex;
+                width: 40%;
+                column-gap: 2vh;
+
+
+            }
+            a {
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 6vh;
+                height: 6vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li {
+                display: flex;
+                width: 100%;
+            }
+
+
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        > section {
+            padding: 4vh;
+            border-top: 1px solid #424245;
+            @include columnDirection;
+            row-gap: 2vh;
+            align-items: center;
+            >article {
+                text-align: center;
+                a {
+                    color: $orange;
+                }
+            }
+            >ul {
+                display: flex;
+                width: 80%;
+            }
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+
+        }
+    }
+
 }
 
 @media (min-width: $tabletScreen) {
@@ -230,7 +328,6 @@ header > section {
                 color: white;
                 background-color: $orange;
                 width: 100%;
-                text-align: right;
             }
         }
     }
@@ -256,4 +353,157 @@ header > section {
         }
 
     }
+
+    // FOOTER
+    footer {
+        padding: 6vh 6vh 6vh 6vh;
+
+        >section {
+            >ul {
+             display: flex;
+             width: 30%;
+
+            }
+            a {
+                transition: .2s;
+
+            }
+            a:hover {
+                color: white;
+            }
+        }
+
+        >article {    
+                flex-direction: row;
+        }
+
+        aside {
+            width: 34%;
+            row-gap: 5vh;
+
+            &:nth-child(2) {
+                a {
+                border-bottom: 1px solid transparent;
+
+                }
+                a:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+           
+
+        }
+
+        .icons {
+            a{
+                transition: .6s;
+            }
+            a:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        [type="submit"] {
+            cursor: pointer;
+            transition: .2s;
+            &:hover {
+                background-color: $greyBackground;
+                color: $orange;
+            }
+        }
+
+    }
+}
+
+@media (min-width: $desktopScreen) {
+    .topbar {
+        > section {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 2%;
+            padding-left: 1%;
+
+        }
+
+        article {
+            width: 25%;              
+            
+        }
+
+    }
+
+    nav {
+        padding-left: 3%;
+        padding-right: 3%;
+        height: 10vh;
+
+        
+
+        > a {
+           display: block;
+           background-color: $orange;
+           padding: 1%;
+           color: whitesmoke;
+           transition: .4s;
+
+           &:hover {
+            background-color: transparent;
+            color: $darkBlue;
+            font-weight: 700;
+        }
+           
+        }
+
+        > ul {
+            display: flex;
+            list-style-type: none;
+            height: 100%;
+            width: 40%;
+            
+            li {
+                display: flex;
+                width: 100%;
+            }
+
+            a {
+                color: $darkBlue;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 50%;
+                
+
+            }
+
+            a:hover {
+                background-color: $orange;
+                color: whitesmoke;
+                font-weight: 700;
+                
+            }
+        }
+
+    }
+
+    details {
+        display: none;
+    }
+
+    footer {
+        >section {
+            padding: 3vh;
+
+            flex-direction: row;
+            justify-content: space-between;
+
+            >ul {
+                width: 20%;
+            }
+        }
+    }
+            
 }
