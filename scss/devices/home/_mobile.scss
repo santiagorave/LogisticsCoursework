@@ -19,6 +19,7 @@
       }
    }
 
+   // MAIN
    .homepage {
       padding: 15vh 0vh;
       row-gap: 8vh;
@@ -77,7 +78,7 @@
       }
    }
    
-
+   // ABOUT SECTION
    .about {
       width: 84%;
       @include columnDirection;
@@ -141,6 +142,7 @@
       }
    }
 
+   // FEATURE SECTION
    .feature {
       @include columnDirection;
       align-items: center;
@@ -198,6 +200,7 @@
       }
    }
 
+   // TEAM SECTION
    .team{
       width: 84%;
       @include columnDirection;
@@ -245,6 +248,7 @@
       }
    }
 
+   // BLOG SECTION
    .blog {
       width: 84%;
       @include columnDirection;
@@ -343,7 +347,5 @@
             transition: .5s;
          }
       }
-
    }
-
 }

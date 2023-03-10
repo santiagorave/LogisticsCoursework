@@ -37,6 +37,7 @@
       }
    }
 
+   // ABOUT SECTION
    .about {
       > section {
          > article {
@@ -78,6 +79,7 @@
       }
    }
 
+   // FEATURE SECTION
    .feature {
       row-gap: 3vh;
 
@@ -115,6 +117,7 @@
       }
    }
 
+   // TEAM SECTION
    .team {
       > article {
          @extend %titleTablet;
@@ -188,6 +191,7 @@
       }
    }
 
+   // BLOG SECTION
    .blog {
       >article {
          @extend %titleTablet;
