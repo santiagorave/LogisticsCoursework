@@ -28,6 +28,56 @@
       width: 100%;
    }
 
+   // HEADER
+   .home-header {
+      height: 55vh;
+
+      > section {
+         display: flex;
+         justify-content: center;
+      }
+
+      article {
+         width: 90%;
+         @include columnDirection;
+         row-gap: 2vh;
+         > h4 {
+            color: $orange;
+            font-size: 30px;
+         }
+
+         > h1 {
+            text-align: center;
+            line-height: 1.3;
+            padding-bottom: 3vh;
+         }
+      }
+
+      form {
+         width: 100%;
+         height: 8vh;
+         display: flex;
+         
+         > input {
+            font-size: 14px;
+         }
+
+         > [type="search"] {
+            width: 60%;
+            padding-left: 6%;
+            border: 0px none transparent;
+         }
+
+         > [type="submit"] {
+            width: 40%;
+            border: 2px solid $orange;
+            background-color: $orange;
+            color: whitesmoke;
+         }
+      }
+   }
+   
+
    .about {
       width: 84%;
       @include columnDirection;
@@ -152,7 +202,7 @@
       width: 84%;
       @include columnDirection;
       row-gap: 3vh;
-      
+
       > article {
          @extend %title;
          text-align: center;

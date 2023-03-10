@@ -1,4 +1,33 @@
 @media (min-width: $desktopScreen) {
+   .home-header {
+      height: 60vh;
+      
+      article {
+         > h1 {
+            font-size: 65px;
+         }
+      }
+
+      form {
+         height: 8vh;
+         display: flex;
+         justify-content: center;
+
+         > input {
+            font-size: 16px;
+         }
+
+         > [type="search"] {
+            width: 36%;
+            padding-left: 2%;
+         }
+
+         > [type="submit"] {
+            width: 12%;
+         }
+      }
+   }
+
    .about {
       width: 100%;
       flex-direction: row;

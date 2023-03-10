@@ -5,6 +5,38 @@
       }
    }
 
+   // HEADER
+   .home-header {
+      height: 45vh;
+
+      article {
+         width: 75%
+      }
+
+      form {
+         height: 6vh;
+
+         > input {
+            font-size: 18px;
+         }
+
+         > [type="search"] {
+            width: 75%;
+         }
+
+         > [type="submit"] {
+            width: 25%;
+            transition: .5s;
+
+            &:hover {
+               cursor: pointer;
+               border-color: whitesmoke;
+               background-color: $darkBlue;
+            }
+         }
+      }
+   }
+
    .about {
       > section {
          > article {
