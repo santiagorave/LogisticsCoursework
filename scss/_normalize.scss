@@ -256,3 +256,81 @@ header > section {
 
     }
 }
+
+@media (min-width: $desktopScreen) {
+    .topbar {
+        > section {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 2%;
+            padding-left: 1%;
+
+        }
+
+        article {
+            width: 25%;              
+            
+        }
+
+    }
+
+    nav {
+        padding-left: 3%;
+        padding-right: 3%;
+        height: 10vh;
+
+        
+
+        > a {
+           display: block;
+           background-color: $orange;
+           padding: 1%;
+           color: whitesmoke;
+           transition: .4s;
+
+           &:hover {
+            background-color: transparent;
+            color: $darkBlue;
+            font-weight: 700;
+        }
+           
+        }
+
+        > ul {
+            display: flex;
+            list-style-type: none;
+            height: 100%;
+            width: 40%;
+            
+            li {
+                display: flex;
+                width: 100%;
+            }
+
+            a {
+                color: $darkBlue;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 50%;
+                
+
+            }
+
+            a:hover {
+                background-color: $orange;
+                color: whitesmoke;
+                font-weight: 700;
+                
+            }
+        }
+
+    }
+
+    details {
+        display: none;
+    }
+            
+}
