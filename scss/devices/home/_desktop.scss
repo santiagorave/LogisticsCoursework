@@ -1,0 +1,131 @@
+@media (min-width: $desktopScreen) {
+   // HEADER
+   .home-header {
+      height: 60vh;
+      
+      article {
+         > h1 {
+            font-size: 65px;
+         }
+      }
+
+      form {
+         height: 8vh;
+         display: flex;
+         justify-content: center;
+
+         > input {
+            font-size: 16px;
+         }
+
+         > [type="search"] {
+            width: 36%;
+            padding-left: 2%;
+         }
+
+         > [type="submit"] {
+            width: 12%;
+         }
+      }
+   }
+
+   // ABOUT SECTION
+   .about {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 2%;
+
+      > figure {
+         width: 30%;
+
+         img {
+            height: 42vh;
+         }
+      }
+
+      figcaption {
+         height: 9vh;
+      }
+
+      > section {
+         width: 52%;
+         justify-content: center;
+      }
+      
+      a {
+         column-gap: 1vw;
+
+         > section {
+            width: 8vh;
+            height: 8vh;
+         }
+      }
+   }
+
+   // FEATURE SECTION
+   .feature {
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 2%;
+      padding: 0;
+
+      > figure {
+         width: 30%;
+         height: 70vh;
+         img {
+           height: 100%; 
+         }
+      }
+
+      > section {
+         width: 52%;
+      }
+   }
+
+   // TEAM SECTION
+   .team {
+      figure {
+         width: 23.5%;
+      }
+
+      img {
+         height: 30vh;
+      }
+   }
+
+   // BLOG SECTION
+   .blog {
+      > section {
+         > section {
+            width: 49%;
+         }
+      }
+
+      figure {
+         height: 45vh;
+      }
+
+      aside {
+         column-gap: 1vw;
+
+         p {
+            width: fit-content;
+         }
+
+         &:nth-child(1),
+         &:nth-child(2) {
+            width: fit-content;
+         }
+      }
+
+      article > section {
+         justify-content: unset;
+         column-gap: 2vw;
+      }
+
+      article > article {
+         row-gap: 2vh;
+      }
+   }
+}

@@ -1,0 +1,351 @@
+@media (min-width: $mobileScreen) {
+   %title {
+      @include columnDirection;
+      row-gap: 1vh;
+
+      > small {
+         color: $orange;
+         text-transform: uppercase;
+         font-weight: 700;
+         font-size: 18px;
+      }
+
+      > h3 {
+         color: $darkBlue;
+         text-transform: capitalize;
+         font-weight: 800;
+         font-size: 30px;
+         line-height: 1.2;
+      }
+   }
+
+   // MAIN
+   .homepage {
+      padding: 15vh 0vh;
+      row-gap: 8vh;
+   }
+
+   .homepage img {
+      width: 100%;
+   }
+
+   // HEADER
+   .home-header {
+      height: 55vh;
+
+      > section {
+         display: flex;
+         justify-content: center;
+      }
+
+      article {
+         width: 90%;
+         @include columnDirection;
+         row-gap: 2vh;
+         > h4 {
+            color: $orange;
+            font-size: 30px;
+         }
+
+         > h1 {
+            text-align: center;
+            line-height: 1.3;
+            padding-bottom: 3vh;
+         }
+      }
+
+      form {
+         width: 100%;
+         height: 8vh;
+         display: flex;
+         
+         > input {
+            font-size: 14px;
+         }
+
+         > [type="search"] {
+            width: 60%;
+            padding-left: 6%;
+            border: 0px none transparent;
+         }
+
+         > [type="submit"] {
+            width: 40%;
+            border: 2px solid $orange;
+            background-color: $orange;
+            color: whitesmoke;
+         }
+      }
+   }
+   
+   // ABOUT SECTION
+   .about {
+      width: 84%;
+      @include columnDirection;
+      row-gap: 3vh;
+
+      > section {
+         @include columnDirection;
+         row-gap: 3vh;
+
+         > article {
+            @extend %title;
+         }
+      }
+
+      a {
+         display: flex;
+         align-items: center;
+         column-gap: 6vw;
+         color: $darkBlue;
+
+         > section {
+            width: 8vh;
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $orange;
+            border-radius: 50%;
+            font-size: 26px;
+         }
+
+         p {
+            color: $darkBlue;
+            font-size: 20px;
+            font-weight: 700;
+         }
+      }
+
+      figure {
+         @include columnDirection;
+      }
+
+      img {
+         height: 40vh;
+         transform: scaleX(-1);
+      }
+
+      figcaption {
+         width: 100%;
+         height: 10vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: $orange;
+         font-size: 24px;
+         font-weight: 700;
+         
+         > p {
+            color: $darkBlue;
+         }
+      }
+   }
+
+   // FEATURE SECTION
+   .feature {
+      @include columnDirection;
+      align-items: center;
+      row-gap: 4vh;
+      background-color: $greyBackground;
+      padding-bottom: 4vh;
+
+      > figure,
+      > section {
+         width: 84%;
+      }
+
+      > section {
+         @include columnDirection;
+         row-gap: 3vh;
+
+         > article {
+            @extend %title;
+         }
+
+         > a {
+            width: 42%;
+            height: 6vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: $orange;
+            border: 1px solid $orange;
+            transition: .5s;
+         }
+      }      
+
+      ul {
+         @include columnDirection;
+         row-gap: 2vh;
+         list-style-type: none;
+      }
+      
+      li > a {
+         display: flex;
+         align-items: center;
+         column-gap: 3vw;
+         text-transform: capitalize;
+
+      }
+      
+      a > p {
+         color: $darkBlue;
+         font-weight: 600;
+      }
+
+      i {
+         color: $orange;
+      }
+   }
+
+   // TEAM SECTION
+   .team{
+      width: 84%;
+      @include columnDirection;
+      row-gap: 3vh;
+
+      > article {
+         @extend %title;
+         text-align: center;
+      }
+      
+      > section {
+         display: flex;
+         flex-wrap: wrap;
+         row-gap: 5vh;
+      }
+
+      figure {
+         width: 100%;
+         @include columnDirection;
+         background-color: $greyBackground;
+      }
+
+      img {
+         height: 40vh;
+      }
+      
+      figcaption article {
+         @include columnDirection;
+         align-items: center;
+         padding: 4% 0%;
+         border-bottom: 5px solid $orange;
+      }
+
+      h5 {
+         font-size: 18px;
+      }
+
+      p {
+         font-weight: 300;
+         font-size: 14px;
+      }
+      
+      aside {
+         display: none;
+      }
+   }
+
+   // BLOG SECTION
+   .blog {
+      width: 84%;
+      @include columnDirection;
+      row-gap: 3vh;
+
+      > article {
+         @extend %title;
+         text-align: center;
+      }
+
+      > section {
+         display: flex;
+         flex-wrap: wrap;
+         row-gap: 5vh;
+         
+         > section {
+            @include columnDirection;
+            align-items: center;
+            background-color: $greyBackground;
+         }
+      }
+
+      figure {
+         width: 100%;
+         height: 30vh;
+
+         > img {
+            height: 100%;
+         }
+      }
+
+      section > article {
+         width: 85%;
+         padding: 4vh 0vh;
+         @include columnDirection;
+         row-gap: 2vh;
+      }
+
+      aside {
+         width: 48%;
+         display: flex;
+         align-items: center;
+         column-gap: 2vw;
+
+         > section {
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            background-image: url(/img/user.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+         }
+
+         p {
+            width: 50%;
+         }
+      }
+
+      article > section {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      article > article {
+         @include columnDirection;
+         row-gap: 3vh;
+      }
+
+      i {
+         color: $orange;
+      }
+
+      h5 {
+         font-size: 18px;
+      }
+
+      a {
+         width: fit-content;
+         display: flex;
+         align-items: center;
+         column-gap: 1vw;
+         border-bottom: 1px solid $orange;
+         text-transform: uppercase;
+         font-weight: 600;
+         transition: .5s;
+         
+         > p {
+            color: $orange;
+            transition: .5s;
+         }
+
+         i {
+            font-size: 12px;
+            font-weight: 900;
+            transition: .5s;
+         }
+      }
+   }
+}

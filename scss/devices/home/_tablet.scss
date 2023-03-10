@@ -1,0 +1,248 @@
+@media (min-width: $tabletScreen) {
+   %titleTablet{
+      > h3 {
+         font-size: 34px;
+      }
+   }
+
+   // HEADER
+   .home-header {
+      height: 45vh;
+
+      article {
+         width: 75%
+      }
+
+      form {
+         height: 6vh;
+
+         > input {
+            font-size: 18px;
+         }
+
+         > [type="search"] {
+            width: 75%;
+         }
+
+         > [type="submit"] {
+            width: 25%;
+            transition: .5s;
+
+            &:hover {
+               cursor: pointer;
+               border-color: whitesmoke;
+               background-color: $darkBlue;
+            }
+         }
+      }
+   }
+
+   // ABOUT SECTION
+   .about {
+      > section {
+         > article {
+            @extend %titleTablet;
+         }
+      }
+
+      a {
+         width: fit-content;
+         column-gap: 3vw;
+         > section {
+            width: 6vh;
+            height: 6vh;
+            border: 1px solid $orange;
+            transition: .5s;
+         }
+
+         p {
+            font-size: 24px;
+            transition: .5s;
+         }
+
+         &:hover {
+            color: $orange;
+
+            > section {
+               background-color: transparent;
+            }
+
+            p {
+               color: $orange;
+            }
+         }
+      }
+
+      figcaption {
+         height: 6vh;
+         font-size: 28px;
+      }
+   }
+
+   // FEATURE SECTION
+   .feature {
+      row-gap: 3vh;
+
+      > section {
+         row-gap: 2vh;
+
+         > article {
+            @extend %titleTablet;
+         }
+
+         > a {
+            width: 20%;
+            height: 4vh;
+
+            &:hover {
+               color: $orange;
+               background-color: transparent;
+            }
+         }
+      }
+
+      ul {
+         row-gap: 1vh;
+      }
+
+      li > a {
+         column-gap: 2vw;
+      }
+
+      a > p {
+         transition: .5s;
+         &:hover {
+            color: $orange;
+         }
+      }
+   }
+
+   // TEAM SECTION
+   .team {
+      > article {
+         @extend %titleTablet;
+      }
+      
+      > section {
+         justify-content: space-between;
+      }
+
+      figure {
+         width: 48%;
+
+         &:hover aside {
+            height: 100%;
+            z-index: 2;
+         }
+      }
+
+      img {
+         height: 25vh;
+      }
+
+      figcaption section {
+         position: relative;
+         overflow: hidden;
+         display: flex;
+         align-items: flex-end;  
+      }
+
+      figcaption article {
+         width: 100%;
+      }
+
+      > h5 {
+         font-size: 20px;
+      }
+
+      > p {
+         font-size: 16px;
+      }
+      
+      aside {
+         position: absolute;
+         width: 100%;
+         height: 0%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         column-gap: 2vw;
+         background-color: $orange;
+         transition: .6s;
+         z-index: -1;
+      }
+
+      a {
+         width: 4vh;
+         height: 4vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: $darkBlue;
+         border: 1px solid $darkBlue;
+         border-radius: 50%;
+         font-size: 20px;
+         transition: .5s;
+
+         &:hover {
+            background-color: $darkBlue;
+            color: whitesmoke;
+         }
+      }
+   }
+
+   // BLOG SECTION
+   .blog {
+      >article {
+         @extend %titleTablet;
+      }
+
+      > section {
+         justify-content: space-between;
+         
+         >section {
+            width: 48%;
+         }
+      }
+
+      figure {
+         height: 20vh;
+      }
+
+      section > article {
+         padding: 3vh 0vh;
+      }
+
+      aside {
+         > section {
+            width: 4vh;
+            height: 4vh;
+         }
+
+         p {
+            width: 40%;
+         }
+
+         &:nth-child(1) {
+            width: 50%;
+         }
+
+         &:nth-child(2) {
+            width: 45%;
+         }
+      }
+
+      h5 {
+         font-size: 24px;
+      }
+
+      a:hover {
+         border-color: $darkBlue;
+
+         > p,
+         > i {
+            color: $darkBlue;
+         }
+      }
+   }
+}
