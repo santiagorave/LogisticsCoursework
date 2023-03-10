@@ -68,6 +68,16 @@
                 row-gap: 2vh;
                 column-gap: 2vh;
             }
+
+            aside {
+                transition: .6s;
+            }
+
+            aside:hover {
+                color: white;
+                background-color: $orange;
+                border-radius: 1vh;
+            }
         }
 
         .text {
