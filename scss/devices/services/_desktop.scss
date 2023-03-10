@@ -1,0 +1,15 @@
+@media (min-width:$desktopScreen) {
+    .topbar {
+        
+        > section {
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+
+        article {
+            justify-content: left;
+        }
+    }
+            
+}

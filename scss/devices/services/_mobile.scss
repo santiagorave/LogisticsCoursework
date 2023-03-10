@@ -292,6 +292,12 @@ main > section > article {
             padding: 5%;
         }
 
+        select {
+            width: 100%;            
+            background: white url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+            appearance: none ;
+        }
+
         [type="submit"] {
             color: whitesmoke;
             border: 1px solid $orange;
@@ -329,6 +335,7 @@ main > section > article {
             }
         
             h4 {
+                
                 padding: 2vh;
                 background-color: $orange;
                 font-size: 26px;
@@ -338,20 +345,18 @@ main > section > article {
             }
 
             h3 {
+                display: flex;
+                align-items: flex-start;
                 font-size: 40px;
                 font-weight: 800;
-
+                > small:last-child {
+                    align-self: flex-end;
+                }
             }
 
             small {
                 font-size: 20px;
                 font-weight: 200;
-            }
-
-            small:nth-child(1){
-                color: red;
-                
-                
             }
 
             a {
