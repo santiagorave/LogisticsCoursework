@@ -257,6 +257,12 @@ header > section {
             }
         }
 
+        p {
+            >a {
+                color: $orange;
+            }
+        }
+
         > section {
             padding: 4vh;
             border-top: 1px solid #424245;
