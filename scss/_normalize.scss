@@ -33,3 +33,227 @@ header {
 header > section {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+@media (min-width: $mobileScreen) {
+    .topbar {
+        background-color:$darkBlue;
+        padding: 2vh;
+        > section {
+            @include columnDirection;
+            align-items: center;
+            row-gap: 1vh;
+        }
+
+        article {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            > small {
+                display: flex;
+                align-items: center;
+                column-gap: 1vh;
+                color: whitesmoke;
+            }
+
+            a {
+                color: whitesmoke;
+                font-size: 12px;
+            }
+
+
+        }
+        
+        ul {
+            display: flex;
+            list-style-type: none;
+            
+            a {
+                color: whitesmoke;
+                width: 3vh;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 10vh;
+        
+        // width: 90%;
+
+        > a {
+            display: none;
+        }
+        
+        > article {
+            display: flex;
+            align-items: center;
+            column-gap: 3vw;
+            color: $orange;
+        }
+        
+        h2 {
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        > ul {
+            display: none;
+        }
+
+        i {
+            padding: 5%;
+            font-size: 30px;
+        }
+
+        
+    }
+
+    details {
+        position: absolute;
+        width: 98%;
+        padding-right: 2%;
+        text-align: right;
+        
+        > ul {
+            position: absolute;
+            text-align: left;
+            list-style-type: none;
+            background-color: white;
+            width: 100%;
+            row-gap: 2vh;
+        }
+
+        li {
+            display: flex;
+        }
+
+        a {
+            width: 100%;
+            color: $orange;
+            font-weight: 600;
+            padding: 2vh;
+            text-transform: uppercase;
+        }
+
+    }
+
+    summary {
+        color: darkgray;
+        padding: 2vh;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 200;
+        border: 1px solid lightgrey;
+    }
+
+    /* HEADER */
+    header {
+        height: 30vh;
+        > section {
+            height: 100%;
+            width: 100%;   
+        }
+
+        article {
+            height: 100%;
+            @include columnDirection;
+            justify-content: center;
+            align-items:center;
+            color: whitesmoke;
+        }
+
+        h1 {
+            font-size: 45px;
+            font-weight: 800;
+        }
+
+        aside {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2vh;
+        }
+
+        a {
+            color: white;
+            font-weight: 400;
+            
+        }
+
+    }
+}
+
+@media (min-width: $tabletScreen) {
+    .topbar {
+        article {
+            width: 40%;
+        } 
+
+        a {
+            transition: .4s;
+        }
+
+        a:hover {
+            color: $orange;
+        }
+    }
+
+    nav {
+        height: 8vh;
+    
+        > article { 
+            column-gap: 1vw; 
+        }
+        
+        h2 {
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        i {
+            font-size: 45px;
+        }
+
+    }
+
+    details {
+        a {
+            font-size: 22px;
+            font-weight: 500;
+            transition: .4s;
+
+            &:hover {
+                color: white;
+                background-color: $orange;
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+
+    summary {
+        padding: 1vh;
+    }
+
+    /* HEADER */
+    header {
+        
+        h1 {
+            font-size: 55px;
+        }
+
+        a {
+            font-size: 20px;
+            transition: .6s;
+            
+            &:hover {
+                color: $orange;
+            }
+        }
+
+    }
+}
