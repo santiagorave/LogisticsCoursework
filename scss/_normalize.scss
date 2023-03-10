@@ -402,8 +402,14 @@ header > section {
         }
 
         .icons {
+
+            ul {
+                column-gap: 1vh;
+            }
             a{
                 transition: .6s;
+                width: 3vh;
+                height: 3vh;
             }
             a:hover {
                 background-color: white;
@@ -508,6 +514,13 @@ header > section {
 
             >ul {
                 width: 20%;
+            }
+        }
+
+        .icons {
+            a{
+                width: 5vh;
+                height: 5vh;
             }
         }
     }
