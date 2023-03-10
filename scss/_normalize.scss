@@ -185,6 +185,104 @@ header > section {
         }
 
     }
+    // FOOTER 
+    footer {
+        padding: 2vh 2vh 2vh 2vh;
+        background-color: $darkBlue;
+        a,p,i,address{
+            color: white;
+        }
+        aside {
+            @include columnDirection;
+            row-gap: 4vh;
+            li {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+            }
+        }
+        h3 {
+            color: $orange;
+        }
+        >article {
+            @include columnDirection;
+            row-gap: 5vh;
+            padding-bottom: 10vh;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            input {
+                width: 100%;
+                padding: 2vh;
+                border: none;
+
+            }
+
+            [type="submit"] {
+                @include styleButtons;
+
+            }
+        }
+
+        .icons {
+
+            ul {
+            display: flex;
+                width: 40%;
+                column-gap: 2vh;
+
+
+            }
+            a {
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 6vh;
+                height: 6vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li {
+                display: flex;
+                width: 100%;
+            }
+
+
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        > section {
+            padding: 4vh;
+            border-top: 1px solid #424245;
+            @include columnDirection;
+            row-gap: 2vh;
+            align-items: center;
+            >article {
+                text-align: center;
+                a {
+                    color: $orange;
+                }
+            }
+            >ul {
+                display: flex;
+                width: 80%;
+            }
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+
+        }
+    }
+
 }
 
 @media (min-width: $tabletScreen) {
@@ -250,6 +348,68 @@ header > section {
             transition: .6s;
             
             &:hover {
+                color: $orange;
+            }
+        }
+
+    }
+
+    // FOOTER
+    footer {
+        padding: 6vh 6vh 6vh 6vh;
+
+        >section {
+            >ul {
+             display: flex;
+             width: 30%;
+
+            }
+            a {
+                transition: .2s;
+
+            }
+            a:hover {
+                color: white;
+            }
+        }
+
+        >article {    
+                flex-direction: row;
+        }
+
+        aside {
+            width: 34%;
+            row-gap: 5vh;
+
+            &:nth-child(2) {
+                a {
+                border-bottom: 1px solid transparent;
+
+                }
+                a:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+           
+
+        }
+
+        .icons {
+            a{
+                transition: .6s;
+            }
+            a:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        [type="submit"] {
+            cursor: pointer;
+            transition: .2s;
+            &:hover {
+                background-color: $greyBackground;
                 color: $orange;
             }
         }
@@ -331,6 +491,19 @@ header > section {
 
     details {
         display: none;
+    }
+
+    footer {
+        >section {
+            padding: 3vh;
+
+            flex-direction: row;
+            justify-content: space-between;
+
+            >ul {
+                width: 20%;
+            }
+        }
     }
             
 }
