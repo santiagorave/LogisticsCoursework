@@ -1,0 +1,45 @@
+@media (min-width: $desktopScreen) {
+   .team {
+      > figure {
+         width: 23.5%;
+      }
+
+      img {
+         height: 30vh;
+      }
+   }
+
+   .blog {
+      > section {
+         > section {
+            width: 49%;
+         }
+      }
+
+      figure {
+         height: 45vh;
+      }
+
+      aside {
+         column-gap: 1vw;
+
+         p {
+            width: fit-content;
+         }
+
+         &:nth-child(1),
+         &:nth-child(2) {
+            width: fit-content;
+         }
+      }
+
+      article > section {
+         justify-content: unset;
+         column-gap: 2vw;
+      }
+
+      article > article {
+         row-gap: 2vh;
+      }
+   }
+}
