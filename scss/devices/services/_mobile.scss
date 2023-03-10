@@ -1,0 +1,224 @@
+body,
+footer,
+details > ul,
+header > section,
+header > section > article,
+main > section,
+main > section > article {
+    @include columnDirection;
+}
+
+
+@media (min-width: $mobileScreen) {
+    main {
+        row-gap: 10vh;
+        
+        > section:nth-child(2) {
+            background-color: $greyBackground;
+
+            h2, h4 {
+                text-align: start;
+            }
+        }
+    }
+
+    h4 {
+        color: $orange;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* SERVICES */
+    .services {
+        padding-top: 10vh;
+        width: 80%;
+
+        > article {
+            text-align: center;
+            row-gap: 2vh;
+        }
+
+        section {
+            @include columnDirection;
+
+            > article {
+                padding-bottom: 5vh;
+                row-gap: 4vh;
+            }
+
+            aside {
+                display: flex;
+                border: 1px solid $orange;
+                background-color: $orange;
+                padding: 3vh;
+                align-items: center;
+                justify-content: center;
+                column-gap: 2vh;             
+            }
+
+            h5 {
+                color: whitesmoke;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            i {
+                font-size: 28px;
+            }
+
+            p {
+                padding-top: 3vh;
+                padding-bottom: 2vh;
+            }
+
+            a {
+                color: $orange;
+                border-bottom: 1px solid lightgray;
+            }
+        }
+
+    }
+
+    /* QUOTE */
+    .quote {
+        > article {
+            padding: 10%;
+            row-gap: 5vh;
+
+            > article {
+                background-color: $orange;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+        
+            }
+        }
+
+        section {
+            @include columnDirection;
+            row-gap: 3vh;
+
+            > article {
+                @include columnDirection;
+                row-gap: 2vh;
+            }
+        }
+
+        h3 {
+            color: $orange;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        h5 {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        form,
+        form > aside {
+            @include columnDirection;
+            row-gap: 1vh;
+            justify-content: center;
+        
+        }
+
+        form {
+            padding: 2vh;
+            height: 40vh;
+            background-color: $orange;
+
+            > aside {
+                width: 100%;
+            }
+        }
+
+        input, select {
+            padding: 5%;
+        }
+
+        select {
+            width: 100%;            
+            background: white url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+            appearance: none ;
+        }
+
+        [type="submit"] {
+            color: whitesmoke;
+            border: 1px solid $orange;
+            background-color: $darkBlue;
+            width: 100%;
+        }
+
+    }
+
+    /* PRICING */
+    .pricing {
+        width: 80%;
+        
+        > article {
+            text-align: center;
+            row-gap: 2vh;
+        }
+
+        section {
+            @include columnDirection;
+            > article {
+                padding-bottom: 5vh;
+                row-gap: 4vh;
+            }
+
+            aside {
+                @include columnDirection;
+                background-color: $greyBackground;
+                padding-top: 3vh;
+                padding-bottom: 3vh;
+                align-items: center;
+                justify-content: center;
+                row-gap: 3vh;
+                            
+            }
+        
+            h4 {
+                
+                padding: 2vh;
+                background-color: $orange;
+                font-size: 26px;
+                font-weight: 800;
+                text-transform: capitalize;
+                color: black;
+            }
+
+            h3 {
+                display: flex;
+                align-items: flex-start;
+                font-size: 40px;
+                font-weight: 800;
+                > small:last-child {
+                    align-self: flex-end;
+                }
+            }
+
+            small {
+                font-size: 20px;
+                font-weight: 200;
+                color: dimgray;
+            }
+
+            a {
+                width: 40%;
+                padding: 3%;
+                background-color: $orange;
+                color: whitesmoke;
+                
+            }
+        }
+    }
+    
+}
+

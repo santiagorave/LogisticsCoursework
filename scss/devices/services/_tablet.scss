@@ -1,0 +1,160 @@
+@media (min-width: $tabletScreen) {
+    main {
+        row-gap: 5vh;
+    }
+
+
+    h2 {
+        font-size: 30px;
+    }
+
+    /* SERVICES */
+    .services {
+        width: 100%;
+
+        section {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 5vw;
+
+            > article {
+                width: 40%;
+                min-height: 20vh;
+            }
+
+            aside {
+                padding: 2vh;
+                column-gap: 1vh;             
+            }
+
+            h5 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+    
+            i {
+                font-size: 32px;
+            }
+    
+            a {
+                font-size: 18px;
+                transition: .6s;
+
+                &:hover {
+                color: $darkBlue;
+                border-bottom: 5px solid $orange;
+                
+                }
+            
+            }
+        }
+
+    }
+
+    /* QUOTE */
+    .quote {
+        > article {
+            padding: 7%;
+        }
+
+        section {
+
+            > article {
+                flex-direction: row;
+                column-gap: 10vh;
+            }
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 45px;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        form {
+            padding: 3vh;
+            row-gap: 2vh;
+        }
+
+        input, select {
+            padding: 2%;
+            font-size: 20px;
+        }
+
+        [type="submit"]{
+            transition: .6s;
+
+            &:hover {
+                color: $orange;
+                background-color: whitesmoke;
+            }
+        }
+        
+
+    }
+
+    /* PRICING */
+    .pricing {
+        width: 100%;
+
+        section {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 3vh;
+            padding: 5%;
+
+            > article {
+                width: 30%;
+                padding-bottom: 10vh;
+            }
+            
+            aside {
+                row-gap: 2vh;
+                            
+            }
+
+            h4 {
+                font-size: 30px;
+            }
+
+            h3 {
+                font-size: 45px;
+               
+            }
+
+            small {
+                font-size: 22px;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            p:nth-child(4){
+                text-align: left;
+            }
+
+            a {
+                width: 60%;
+                font-size: 18px;
+                transition: .4s;
+            }
+        }
+
+        a:hover {
+            background-color: transparent;
+            border: 1px solid $darkBlue;
+            color: $orange;
+        }
+    }
+}
