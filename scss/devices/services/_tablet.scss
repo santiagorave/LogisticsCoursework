@@ -33,13 +33,15 @@
 
     details {
         a {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 500;
-            transition: .4s;
+            transition: .6s;
 
-            // &:hover {
-            //     border: 4px solid $darkBlue;
-            // }
+            &:hover {
+                color: white;
+                background-color: $orange;
+                width: 50%;
+            }
         }
     }
 
@@ -69,18 +71,13 @@
         row-gap: 5vh;
     }
 
-    h4 {
-        font-size: 20px;
-    }
 
     h2 {
-        font-size: 34px;
-        text-align: center;
+        font-size: 30px;
     }
 
     /* SERVICES */
     .services {
-        padding-top: 5vh;
         width: 100%;
 
         section {
@@ -101,7 +98,7 @@
 
             h5 {
                 font-size: 18px;
-                font-weight: 600;
+                font-weight: 500;
             }
     
             i {
@@ -109,7 +106,7 @@
             }
     
             a {
-                font-size: 20px;
+                font-size: 18px;
                 transition: .6s;
 
                 &:hover {
@@ -151,11 +148,12 @@
         }
 
         form {
-            padding: 2vh;
+            padding: 3vh;
+            row-gap: 2vh;
         }
 
         input, select {
-            padding: 3%;
+            padding: 2%;
             font-size: 20px;
         }
 
